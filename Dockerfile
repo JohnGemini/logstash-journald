@@ -1,7 +1,7 @@
 FROM logstash:5
 
 # Install logstash plugins.
-RUN logstash-plugin install logstash-input-journald logstash-output-elasticsearch
+RUN logstash-plugin install logstash-input-journald logstash-output-elasticsearch logstash-input-beats
 
 # Create a volume for storing state, set it as a default for the journald plugin
 # to store the cursor.
